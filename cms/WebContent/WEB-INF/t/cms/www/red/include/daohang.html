@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/cms/r/cms/www/red/stjsCSS/top.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" language="javascript">
+//<!CDATA[
+function g(o){return document.getElementById(o);}
+function HoverLi(n){
+//如果有N个标签,就将i<=N;
+for(var i=1;i<=2;i++){g('tb_'+i).className='normaltab';g('tbc_0'+i).className='undis';}g('tbc_0'+n).className='dis';g('tb_'+n).className='hovertab';
+}
+//如果要做成点击后再转到请将<li>中的onmouseover 改成 onclick;
+//]]>
+
+function g2(o){return document.getElementById(o);}
+function HoverLi2(n){
+for(var i=1;i<=2;i++){g2('te_'+i).className='normaltae';g2('tbo_0'+i).className='undie';}g2('tbo_0'+n).className='die';g2('te_'+n).className='hovertae';
+}
+
+function g3(o){return document.getElementById(o);}
+function HoverLi3(n){
+for(var i=1;i<=2;i++){g3('tm_'+i).className='normaltam';g3('tbm_0'+i).className='undim';}g3('tbm_0'+n).className='dim';g3('tm_'+n).className='hovertam';
+}
+</script>
+</head>
+
+<body>
+<center>
+     <!---------------------------头部---------------------->
+     <div class="top">
+          <div class="topa"></div>
+               <div class="topb">
+                    <ul>
+                      <li class="lia"><a href="#" target="_blank">首页</a></li>
+                      <li class="lib">[@cms_channel id='2']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      <li class="lib">[@cms_channel id='3']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      <li class="lib">[@cms_channel id='4']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      <li class="lib">[@cms_channel id='5']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      <li class="lib">[@cms_channel id='6']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      <li class="lib">[@cms_channel id='7']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      <li class="lib">[@cms_channel id='9']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>                    
+                    </ul>                   
+               </div>
+     </div>
+     <!------------------------------------搜索-------------------------->
+     <div id="sosuo">
+           <div class="rdul">
+         	   热门tags： 
+[@cms_tag_list count='8'][#list tag_list as tag]<a href="${base}/tag/${tag.id}.jspx" target="_blank">${tag.name}</a>[#if tag_has_next]|[/#if][/#list][/@cms_tag_list]
+         </div>
+           <div class="hyzxul">
+         	  <span class="hyzxali"><a href="${base}/register.jspx">会员注册</a></span>
+              <span class="hyzxli"><a href="${base}/login.jspx?returnUrl=${location}">会员登录</a></span>
+         </div>
+         <div class="srk">
+         <form action="${base}/search.jspx" target="_blank">
+        <input name="q" value="${q!'请输入关键词'}" type="text" id="txtKey" onfocus="if(this.value=='请输入关键词')this.value=''" onblur="if(this.value=='')this.value='请输入关键词'" maxlength="24" autocomplete="off" />
+		<span id="fid_box">
+		<select name="channelId" id="fid">
+		  <option value="">所有信息</option>
+		  [@cms_channel_list]
+		  [#list tag_list as c]
+		  <option value="${c.id}">${c.name}</option>
+		  [/#list]
+	      [/@cms_channel_list]
+		</select>
+		</span>
+        <input type="submit" id="btnSearch" name="搜索"  value="搜索" style="width:80px;"/>
+      </form>
+         </div>
+  </div>

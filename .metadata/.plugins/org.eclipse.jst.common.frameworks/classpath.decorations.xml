@@ -1,0 +1,13 @@
+<classpath>
+  <container id="springmvc-2!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/website/spring/springmvc-2/WebContent/WEB-INF/lib/spring-webmvc-4.0.0.RELEASE.jar">
+      <source-attachment-path>D:/J2EE/spring-framework-4.0.0.RELEASE-src</source-attachment-path>
+      <attribute name="source_encoding">UTF-8</attribute>
+    </entry>
+  </container>
+  <container id="SolrClient!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="D:/website/java_project/SolrClient/WebContent/WEB-INF/lib/solr-solrj-6.2.1.jar">
+      <source-attachment-path>/SolrClient/WebContent/WEB-INF/lib</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

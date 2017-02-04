@@ -1,0 +1,42 @@
+ 系统管理后台登录：http://localhost:8080/cms/willadmin/willcms/index.do
+     用户名：admin  
+     密 码：password  
+数据库脚本：WebContent\cms2.sql
+新建数据库cms2,导入cms2.sql
+
+
+
+freemarker自定义标签
+以文章列表为例
+[@cms_content_list channelId='60' orderBy='4' count='5' titLen='20' descLen='40' append='...' channelOption='1' dateFormat='yyyy-MM-dd']
+[#list tag_list as a]
+<li>
+<a href="${a.url}" target=_blank>[@text_cut s=a.title len=titLen append=append/]</a>
+</li>
+[/#list]
+[/@cms_content_list]
+
+
+在web.xml中定义一个org.springframework.web.servlet.DispatcherServlet，用于拦截请求给spring处理
+在spring配置文件中定义一个freemarker视图解析器如com.common.web.springmvc.SimpleFreeMarkerViewResolver，它继成于org.springframework.web.servlet.view.AbstractTemplateViewResolver（也可用默认的springframwork中的freemarker解析器）
+定义freemarker配置器
+<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="freemarkerVariables">
+	         <entry key="cms_content_list" value-ref="cms_content_list"/>//cms_content_list引用的是定义的javabean
+	</map>
+		</property>
+		</bean>
+	
+				
+
+这就是标签类：<bean id="cms_content_list" class="com.cms.action.directive.ContentListDirective"/>，它最重要的方法就是execute(Environment env, Map params, TemplateModel[] loopVars,
+			TemplateDirectiveBody body)其中第二个参数就是我们需要传递的参数map如channelId='60'等等
+
+drop database jeesite;
+CREATE DATABASE jeesite DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+set names utf8; 
+use jeesite;
+source D:/Users/jianghong.li/Desktop/JAVA001信息管理平台/JGGFrame/db/数据库脚本jggframe.sql;
+
+
+	

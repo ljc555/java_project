@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页 - ${site.name} </title>
+<link href="/${res}/stjsCSS/top.css" rel="stylesheet" type="text/css"/>
+<link href="/${res}/stjsCSS/bottom.css" rel="stylesheet" type="text/css"/>
+<link href="/${res}/stjsCSS/center.css" rel="stylesheet" type="text/css" />
+<body>
+<center>
+ <!---------------------------头部---------------------->
+
+     [#include "../include/页头导航栏.html"/]
+
+     <!------------------------------------搜索-------------------------->
+
+     [#include "../include/页头搜索栏.html"/]
+
+     <!--------------------内容开始----------------------->
+     <!------------广告---------->
+     <div id="guanggao">
+           <div class="ga"><img src="../images/ziimg_03.jpg" width="471" height="60" /></div>
+           <div class="ga"><img src="../images/ziimg_03.jpg" width="471" height="60" /></div>
+     </div>
+     
+     
+     
+     <!-----------------内容---------->
+   <div id="center1">
+<!-----------------内容左侧---------->
+     		<div class="right">
+            	  <div class="rightno1"></div>
+                  <ul class="rightan">
+                        [@cms_channel_list parentId=channel.id]
+                        [#list tag_list as c]
+                        <li class="an"><a href="${c.url}" >${c.name}</a></li>
+                        [/#list]
+                        [/@cms_channel_list]
+                  </ul>
+                  <div class="rightgg">
+                  		<div class="gg"><img src="images/gg_22.jpg" width="173" height="60" /></div>
+                        <div class="gga"><img src="images/gg_22.jpg" width="173" height="60" /></div>
+                  </div>
+            </div>
+     <!-----------------内容右侧---------->
+            <div class="left">
+                 <div class="daohang">
+                       <ul class="centerdh">
+                            <li class="dh1">当前位置：</li>
+                            <li class="dh2"><a href="${base}">首页</a></li>
+                            <li class="dh2">&nbsp;&raquo;&nbsp;[#list channel.nodeList as n]<a href="${n.url}" target="_blank">${n.name}</a>[#if n_has_next] &nbsp;&raquo;&nbsp; [/#if][/#list]</li>
+                       </ul>
+                 </div>
+              [@cms_channel_list parentId=channel.id]
+                [#list tag_list as c]
+                  <div class="centerbt"><h2><a href="${c.url}">${c.name}</a></h2></div>
+                  <div class="centernr">
+                      <div class="wenziguding">
+                 	       <ul class="nrwz">
+                           [@cms_content_list count='10' titLen='30' orderBy='9' channelId=c.id]
+                             [#list tag_list as a]
+                               <li class="wzamt"><a href="${a.url}" title="${a.title}" target="_blank">[@text_cut s=a.title len=titLen append="..."/]</a></li>
+                                  <br />
+                             [/#list]
+                           [/@cms_content_list]
+                           </ul>
+                       </div>  
+                       <div class="neirongxiangqing">
+                         		<ul class="xqan">
+                                     <li class="xan"></li>
+                                     <li class="xwz"><span class="wzyz"><a href="${c.url}">点击进入详情页面</a></span></li>
+                                </ul>
+                       </div>
+                  </div>
+                [/#list]
+              [/@cms_channel_list]
+            </div>
+     <!------------------------底部导航------------------------>
+     [#include "../include/页脚信息栏.html"/]
+     <!--------------------内容文字控制----------------------->
+
+</center>
+  <script type="text/javascript">
+  function funzifu(id,len){
+		
+		var u1=document.getElementById(id).childNodes;
+		var zhi=u1;
+		
+		for(var i1=0;i1<zhi.length;i1++){
+			var tex=zhi[i1].innerText;
+			
+				if(tex.length>len){
+		
+		var tes=document.createElement('text');
+		zhi[i1].childNodes[1].innerText=tex.substring(0,len)+"...";
+		
+
+			}
+			}
+		
+	  }
+	
+	funzifu("1",15);
+  </script>
+</body>
+</html>

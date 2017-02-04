@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+/*-------------------全局------------------------*/
+body { margin:0; padding:0; background-color: #FFF;	font:Arial, Helvetica, sans-serif;	font-size:12px;	text-align:center;
+}
+img { border:0;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p { margin: 0px; padding: 0px;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+ol,ul {list-style:none;}
+h1,h2,h3 {font-size:14px; font-weight:normal;}
+img {text-align: center;}
+h2 {font-size: 14px;}
+h1 {font-size: 14px;}
+.ul .li{margin: 0;padding: 0;}
+.right { float:right;}
+a:link { color:#000; text-decoration:none}
+a:visited { color:#000;text-decoration: none;}
+a:hover {color: #000;text-decoration: underline;}
+a:active {color: #CCC;}
+.red1 {color:#333;}
+.b{ font-size:12px; color:#333;}
+/*--------------------------------全局结束----------------------*/
+
+/*---------------------------------------头部-------------------------------*/
+.top {height: 164px;width: 960px;padding-top: 2px;}
+ 
+.topa {height: 118px;width: 960px;background-image: url(/cms/r/cms/www/red/images/stjs250_03.jpg);background-repeat: no-repeat;background-color: #FFF;padding:0 0 2px 0px;}
+
+.topb {height: 42px;width: 960px;background-image: url(/cms/r/cms/www/red/images/DBDH.jpg);background-repeat: no-repeat;}
+
+.topb ul {width: 960px;height: 14px; padding:0px; margin:0;}
+
+.topb ul .lia {display: inline;font-weight:bold;font-size:14px;height: 14px;float: left; margin: 12px 0 0 20px;padding-left: 20px;}
+
+.topb ul .lib {display: inline;font-weight:bold;font-size:14px;height: 14px;float: left;margin: 12px 0 0 20px;padding-left: 20px;border-left-width:1px;border-left-style: solid;border-left-color: #4279c6;}
+
+.topb ul li a:link { color:#FFF; text-decoration:none}
+.topb ul li a:visited { color:#FFF;text-decoration: none;}
+.topb ul li a:hover {color: #CCC;text-decoration: underline;}
+.topb ul li a:active {color: #CCC;}
+
+/*------------------------------搜索--------------------------*/
+#sosuo {margin: 0px; padding: 0px; height: 45px; width: 960px;
+}
+#sosuo .rdul { width:400px; height:43px; margin:0; padding:0; text-align:left; margin-left:10px; float:left;}
+#sosuo .rdli{ display:inline; float:left; padding:14px 5px 0 0px;}
+#sosuo .hyzxul {width: 160px; height:12px; text-align:left; margin-left:20px; margin-bottom:10px; float:left;}
+.hyzxli { height:12px;display:inline; float:left;margin:14px 0 0 0px; padding:0 10px 0 10px; border-left-color:%4279c6; border-left-style:solid; border-left-width:1px}
+.hyzxali { height:12px;display:inline; float:left;margin:14px 0 0 0px; padding:0 10px 0 10px; }
+#sosuo .srk{ width:358px; height:43px; float:left;}
+#sk { float:left;height: 12px;width: 200px; margin-top:8px; padding:5px 0 3px 0px;border: 1px solid #CCC;}
+#skan{float:left;height: 25px;width: 52px;}

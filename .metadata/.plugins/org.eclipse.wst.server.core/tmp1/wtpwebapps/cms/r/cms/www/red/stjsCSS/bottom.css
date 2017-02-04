@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+/*-------------底部导航---------*/
+#bom {height: 100px;width: 960px;padding: 10px 0 0 0px;margin: 0px; border-top-width:1px; border-top-color:#d8d8d8; border-top-style:solid; clear:both}
+#bom .daohang { width:960px; height:20px;margin: 0px;padding: 0; text-align:center;}
+.daowz {display: inline;padding: 10px 15px 15px 0px;}
+.dbwenzi {height: 12px; width: 960px; text-align:center;}
+.dbwzamt { margin-top:10px;height: 12px;width: 960px;}
+/*--------------------------友情链接----------*/
+ #bottom {background-image: url(/cms/r/cms/www/red/images/bottom_58.jpg);background-repeat: no-repeat;padding: 30px 0 0 0px;height: 90px; width: 960px;margin: 15px 0 0 0px;background-position: center;}
+.dblj {margin: 15px 0 0 0px; text-align:center; width:960px; height:auto; padding:0;}
+.d1 {height: 37px;width: 95px;display: inline; margin:0 0 0 10px;}
+.dbak { text-align:center; margin: 0px;padding: 10px 0 0 0px;}
+.lianjie {display: inline; width:auto; padding: 0 20px 0 20px;}
+.daohang {height: 30px;width: 760px;margin-left: 5px;}

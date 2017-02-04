@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/cms/r/cms/www/red/stjsCSS/top.css" rel="stylesheet" type="text/css"/>
+<link href="/cms/r/cms/www/red/stjsCSS/center.css" rel="stylesheet" type="text/css" />
+<link href="/cms/r/cms/www/red/stjsCSS/bottom.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" language="javascript">
+//<!CDATA[
+function g(o){return document.getElementById(o);}
+function HoverLi(n){
+//如果有N个标签,就将i<=N;
+for(var i=1;i<=2;i++){g('tb_'+i).className='normaltab';g('tbc_0'+i).className='undis';}g('tbc_0'+n).className='dis';g('tb_'+n).className='hovertab';
+}
+//如果要做成点击后再转到请将<li>中的onmouseover 改成 onclick;
+//]]>
+
+function g2(o){return document.getElementById(o);}
+function HoverLi2(n){
+for(var i=1;i<=2;i++){g2('te_'+i).className='normaltae';g2('tbo_0'+i).className='undie';}g2('tbo_0'+n).className='die';g2('te_'+n).className='hovertae';
+}
+
+function g3(o){return document.getElementById(o);}
+function HoverLi3(n){
+for(var i=1;i<=2;i++){g3('tm_'+i).className='normaltam';g3('tbm_0'+i).className='undim';}g3('tbm_0'+n).className='dim';g3('tm_'+n).className='hovertam';
+}
+</script>
+</head>
+
+<body>
+<center>
+
+     <div class="top">
+          <div class="topa"></div>
+               <div class="topb">
+                    <ul>
+                      <li class="lia">： <a href="${base}/">首页</a></li>
+                      <li class="lib">[@cms_channel id='2']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      <li class="lib">[@cms_channel id='3']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      <li class="lib">[@cms_channel id='4']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      <li class="lib">[@cms_channel id='5']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      <li class="lib">[@cms_channel id='6']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      <li class="lib">[@cms_channel id='7']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      <li class="lib">[@cms_channel id='9']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>                    
+                    </ul>                   
+               </div>
+     </div>
+     
+     
+     
+     <div id="sosuo">
+           <div class="rdul">
+         	   热门tags： 
+[@cms_tag_list count='8'][#list tag_list as tag]<a href="${base}/tag/${tag.id}.jspx" target="_blank">${tag.name}</a>[#if tag_has_next]|[/#if][/#list][/@cms_tag_list]
+         </div>
+           <div class="hyzxul">
+         	  <span class="hyzxali"><a href="${base}/register.jspx">会员注册</a></span>
+              <span class="hyzxli"><a href="${base}/login.jspx?returnUrl=${location}">会员登录</a></span>
+         </div>
+         <div class="srk">
+         <form action="${base}/search.jspx" target="_blank">
+        <input name="q" value="${q!'请输入关键词'}" type="text" id="txtKey" onfocus="if(this.value=='请输入关键词')this.value=''" onblur="if(this.value=='')this.value='请输入关键词'" maxlength="24" autocomplete="off" />
+		<span id="fid_box">
+		<select name="channelId" id="fid">
+		  <option value="">所有信息</option>
+		  [@cms_channel_list]
+		  [#list tag_list as c]
+		  <option value="${c.id}">${c.name}</option>
+		  [/#list]
+	      [/@cms_channel_list]
+		</select>
+		</span>
+        <input type="submit" id="btnSearch" name="搜索"  value="搜索" style="width:80px;"/>
+      </form>
+         </div>
+  </div> 
+     <!--------------------内容----------------------->
+     
+<div id="nr1">
+     		<div id="leftno1">
+                  <div class="redian">
+                       <div class="qiehuan"></div>
+                  </div>
+                  <div class="ldjh">
+                       <h2>[@cms_channel id='44']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</h2>
+                  </div>
+                  <div class="jhnr">
+                       <div class="xiaotu"></div>
+                       <div class="ldjs">
+                              [@cms_content_list count='5' titLen='10' descLen='68' channelId='44' channelOption='1'][#list tag_list as a]
+                               <h3><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></h3>
+                               <div class="ldcss">
+                                    [@text_cut s=a.desc len=descLen append=append/] [<a href="${a.url}" target="_blank">更多</a>]
+                               </div>
+                               [/#list][/@cms_content_list]
+                       </div>
+                  </div>
+           </div>
+           <div id="centerno1">
+                <div class="xzzn">
+                    <div id="tb_" class="tb_">
+                      <ul>
+                        <li id="tb_1" class="hovertab" onmouseover="x:HoverLi(1);">[@cms_channel id='87']<a href="${tag_bean.url}" target="_blank">${tag_bean.name}</a>[/@cms_channel]</li>
+                        <li id="tb_2" class="normaltab" onmouseover="i:HoverLi(2);">[@cms_channel id='40']<a href="${tag_bean.url}" target="_blank">${tag_bean.name}</a>[/@cms_channel]</li>
+                      </ul>
+                    </div>
+                   <div class="dis" id="tbc_01">
+                           <ul>
+                              <ul>
+                              [@cms_content_list count='5' channelId='87' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                        [/#list][/@cms_content_list]                          
+                         </ul>                         
+                         </ul>
+                    </div>
+                    <div class="undis" id="tbc_02">
+                         <ul><ul>
+                              [@cms_content_list count='5' channelId='40' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                               [/#list][/@cms_content_list]                            
+                         </ul>                               
+                         </ul>
+                    </div>
+                </div> 
+                
+                
+                <div class="zwzx">
+                    <div id="te_" class="te_">
+                      <ul>
+                        <li id="te_1" class="hovertae" onmouseover="x:HoverLi2(1);">[@cms_channel id='67']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                        <li id="te_2" class="normaltae" onmouseover="i:HoverLi2(2);">[@cms_channel id='68']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      </ul>
+                    </div>
+                    <div class="die" id="tbo_01">
+                         <ul>
+                              [@cms_content_list count='5' channelId='67' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                               [/#list][/@cms_content_list]              
+                         </ul>
+                    </div>
+                    <div class="undie" id="tbo_02">
+                          <ul>
+                              [@cms_content_list count='5' channelId='68' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                               [/#list][/@cms_content_list]                   
+                         </ul>
+                    </div>
+                </div>
+           </div>
+           <div id="rightno1">
+           		<div class="hyzx">
+                      <h2>会员中心</h2>
+                </div>
+          <div class="hyno1">
+                	  <div class="hykstd">
+                           <ul>
+                           		<li><span class="hynan"><img src="images/dengldianji_25.jpg" width="17" height="18" /></span><a href="${base}/login.jspx?returnUrl=${location}">会员登录</a></li>
+                           </ul>
+                      </div>
+                      <div class="hyjsxtyx">
+                            <ul>
+                           		<li><span class="hynana"><img src="images/dengldianji_25.jpg" width="17" height="18" /></span><a href="#" target="_blank">点击登录</a></li>
+                           </ul>
+                      </div>
+            </div>
+                      <div class="bmfw">
+                      		<ul> 
+                              
+                    
+                                <li class="an2">[@cms_channel id='96']<a href="${tag_bean.url}" target="_blank"><img src="images/bman_34.jpg"/></a>[/@cms_channel]</li>
+                                <li class="an3">[@cms_channel id='70']<a href="${tag_bean.url}" target="_blank"><img src="images/bman_38.jpg"/></a>[/@cms_channel]</li>
+                                <li class="an4">[@cms_channel id='103']<a href="${tag_bean.url}" target="_blank"><img src="images/bman_41.jpg"/></a>[/@cms_channel]</li>
+                                <li class="an5">[@cms_channel id='104']<a href="${tag_bean.url}" target="_blank"><img src="images/bman_43.jpg"/></a>[/@cms_channel]</li>             <li class="an1">[@cms_channel id='94']<a href="${tag_bean.url}" target="_blank"><img src="images/bman_31.jpg"/></a>[/@cms_channel]<li>
+                                <!-- 
+                                <li class="an1"><a href="#" target="_blank" style="width:228px; height:35px; display:block;"><img src="images/bman_31.jpg"/></a></li>
+                                <li class="an2"><a href="#" target="_blank" style="width:228px; height:35px; display:block;"><img src="images/bman_34.jpg"/></a></li>
+                                <li class="an3"><a href="#" target="_blank" style="width:228px; height:35px; display:block;"><img src="images/bman_38.jpg"/></a></li>
+                                <li class="an4"><a href="#" target="_blank" style="width:228px; height:35px; display:block;"><img src="images/bman_41.jpg"/></a></li>
+                                <li class="an5"><a href="#" target="_blank" style="width:228px; height:35px; display:block;"><img src="images/bman_43.jpg"/></a></li>
+                                -->
+                            </ul>
+                      </div>
+           </div>        
+     </div>
+     
+     <!--------------------内容3----------------------->
+     <div id="nr3">
+           <div class="gkml">
+                <ul>
+                     <li>[@cms_channel id='86']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                     <li>[@cms_channel id='102']<a href='${tag_bean.url}'> ${tag_bean.name}凤飞飞 </a>[/@cms_channel]</li>
+                     <li>[@cms_channel id='98']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                     <li>[@cms_channel id='99']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                     <li>[@cms_channel id='97']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                </ul>
+           </div>
+           <div class="wztz_bsjg">
+                    <div id="tm_" class="tm_">
+                      <ul>
+                        <li id="tm_1" class="hovertam" onmouseover="x:HoverLi3(1);">[@cms_channel id='43']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                        <li id="tm_2" class="normaltam" onmouseover="i:HoverLi3(2);">[@cms_channel id='49']<a href='${tag_bean.url}'> ${tag_bean.name} </a>[/@cms_channel]</li>
+                      </ul>
+                    </div>
+                   <div class="dim" id="tbm_01">
+                       <ul>
+                               [@cms_content_list count='5' channelId='43' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                               [/#list][/@cms_content_list]                            
+                         </ul>
+                    </div>
+                    <div class="undim" id="tbm_02">
+                        <ul>
+                               [@cms_content_list count='5' channelId='49' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                               [/#list][/@cms_content_list]                            
+                         </ul>
+                    </div>
+           </div>
+           <div class="bman">
+           		<ul>
+                     <li class="bm1">[@cms_channel id='105']<a href="${tag_bean.url}" target="_blank"><img src="images/bman_44.jpg" /></a>[/@cms_channel]</li>
+                	 <li class="bm2">[@cms_channel id='108']<a href="${tag_bean.url}" target="_blank"><img src="images/bman_50.jpg" /></a>[/@cms_channel]</li>
+                     <li class="bm3">
+                     <table width="200" border="0" cellpadding="0" cellspacing="0">
+                             <tr>
+                                <td width="107" height="36"><[@cms_channel id='107']<a href="${tag_bean.url}" target="_blank">　　　</a>[/@cms_channel]</td>
+                                <td width="107" height="36"><a href="#" target="_blank" style=" display:block;width:107px; height:36px; "></a></td>
+                            </tr>
+                    </table>
+                    </li>
+                   <li class="bm4">[@cms_channel id='108']<a href="${tag_bean.url}" target="_blank"><img src="images/bman_56.jpg"/></a>[/@cms_channel]</li>
+                     <li class="bm5">
+                       <table width="200" border="0" cellpadding="0" cellspacing="0">
+                             <tr>
+                                <td width="107" height="36"><a href="#" target="_blank" style=" display:block;width:107px; height:36px;"></a></td>
+                                <td width="107" height="36"><a href="#" target="_blank" style=" display:block;width:107px; height:36px; "></a></td>
+                            </tr>
+                    </table>
+                     </li>
+                </ul>
+           </div>
+     </div>
+     <!--------------------广告---------------------->
+     <div id="nr2">
+     	   <div class="guanggao1"><img src="images/sty80168_03.jpg" width="468" height="68" alt="广告" /></div>
+           <div class="guanggao2"><img src="images/sty80168_03.jpg" width="468" height="68" alt="广告" /></div>
+     </div>
+     <!--------------------内容三---------------------->
+     <div id="nr4">
+           <div class="zyzc">
+                 <div class="bt1">
+                      <ul>
+                      	  <li><h2>[@cms_channel id='88']<a href="${tag_bean.url}" target="_blank">${tag_bean.name}</a></h2><span class="right red1"><a href="${tag_bean.url}" target="_blank">+更多</a></span>[/@cms_channel]<li>
+                      </ul> 
+                 </div>
+                 <div class="amt">
+                      <ul>
+                           [@cms_content_list count='7' channelId='88' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                               [/#list][/@cms_content_list]                            
+                     </ul>
+                  </div>
+           </div>
+           <div class="zbtb">
+                 <div class="bt2">
+                      <ul>
+                      	  <li><h2>[@cms_channel id='3']<a href="${tag_bean.url}" target="_blank">${tag_bean.name}</a></h2><span class="right red1"><a href="${tag_bean.url}" target="_blank">+更多</a></span>[/@cms_channel]<li>
+                      </ul> 
+                 </div>
+                   <div class="amt1">
+                        <ul>
+                           [@cms_content_list count='7' channelId='3' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                               [/#list][/@cms_content_list]                         
+                       </ul>
+                 </div>
+           </div>
+           <div class="zcfg">
+                 <div class="bt2">
+                      <ul>
+                      	  <li><h2>[@cms_channel id='5']<a href="${tag_bean.url}" target="_blank">${tag_bean.name}</a></h2><span class="right red1"><a href="${tag_bean.url}" target="_blank">+更多</a></span>[/@cms_channel]<li>	
+                      </ul> 
+                 </div>
+                    <div class="amt2">
+                     <ul>
+                           [@cms_content_list count='7' channelId='5' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                               [/#list][/@cms_content_list]                        
+                     </ul>
+                   </div>
+           </div>
+           <div class="bmpm">
+                <div class="bbm"><h2>便民服务</h2></div>
+                <ul>
+                    <li class="fli"><a href="${base}/guestbook.jspx?id=1" target="_blank">法律咨询</a></li>
+                    <li><a href="#">信息咨询</a></li>
+                    <li><a href="#">意见咨询</a></li>
+                    <li><a href="#">网上回复</a></li>
+                </ul>
+           </div>
+     </div>
+     <!-------------------内容四----------------------->
+     <div id="nr5">
+     	   <div class="rqgl">
+                <div class="rqgl1">
+                     <div class="bt3">
+                      <ul>
+                      	  <li><h2>[@cms_channel id='4']<a href="${tag_bean.url}" target="_blank">${tag_bean.name}</a></h2><span class="right red1"><a href="${tag_bean.url}" target="_blank">+更多</a></span>[/@cms_channel]<li>	
+                      </ul> 
+                     </div>
+                     <div class="amt3">
+                     <ul>
+                           [@cms_content_list count='5' channelId='4' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                               [/#list][/@cms_content_list]                         
+                     </ul>
+                     </div>
+                </div>
+                <div class="rqgl2">
+                     <div class="gamt"><img src="images/sty80168_09.jpg" width="227" height="69" alt="" /></div>
+                </div>
+           </div>
+           <div class="zfyfdckf">
+                <div class="zfyfdckf1">
+                     <div class="bt4">
+                      <ul>
+                      	  <li><h2>[@cms_channel id='6']<a href="${tag_bean.url}" target="_blank">${tag_bean.name}</a></h2><span class="right red1"><a href="${tag_bean.url}" target="_blank">+更多</a></span>[/@cms_channel]<li>
+                      </ul> 
+                     </div>
+                     <div class="amt4">
+                     <ul>
+                           [@cms_content_list count='5' channelId='6' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                               [/#list][/@cms_content_list]                          
+                     </ul>
+                     </div>
+                </div>
+                <div class="zfyfdckf2">
+                     <div class="gamt1"><img src="images/sty80168_11.jpg" width="217" height="69" alt="" /></div>
+                </div>
+           </div>
+           <div class="cxjs">
+                 <div class="bt5">
+                      <ul>
+                      	  <li><h2>[@cms_channel id='5']<a href="${tag_bean.url}" target="_blank">${tag_bean.name}</a></h2><span class="right red1"><a href="${tag_bean.url}" target="_blank">+更多</a></span>[/@cms_channel]<li>	
+                      </ul> 
+                 </div>
+                 <div class="amt5">
+                 <ul>
+                           [@cms_content_list count='9' channelId='5' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                               [/#list][/@cms_content_list]                               
+                     </ul>
+                  </div>
+           </div>
+           <div class="qyzs">
+                <div class="bt6">
+                      <ul>
+                          <li><h2>[@cms_channel id='101']<a href="${tag_bean.url}" target="_blank">${tag_bean.name}</a></h2><span class="right red1"><a href="${tag_bean.url}" target="_blank">+更多</a></span>[/@cms_channel]</h2><span class="right red1"></span><li>
+                      </ul> 
+                     </div>
+                     <div class="amt6">
+                     <ul> [@cms_content_list count='9' channelId='101' titLen='10' dateFormat='MM-dd' channelOption='1'][#list tag_list as a]
+                               <li><span class="right red1"></span><a href="${a.url}" title="${a.title}">[@text_cut s=a.title len=titLen append=append/]</a></li>
+                               [/#list][/@cms_content_list]                       
+                     </ul>
+                    </div>
+           </div>
+     </div>  
+     
+     <!--------------------底部----------------------->
+     <div id="bottom">
+           <ul class="dblj">
+                <li class="d1"><img src="images/logo_13.jpg" width="95" height="37" /></li>
+                <li class="d1"><img src="images/logo_13.jpg" width="95" height="37" /></li>
+                <li class="d1"><img src="images/logo_13.jpg" width="95" height="37" /></li>
+                <li class="d1"><img src="images/logo_13.jpg" width="95" height="37" /></li>
+                <li class="d1"><img src="images/logo_13.jpg" width="95" height="37" /></li>
+                <li class="d1"><img src="images/logo_13.jpg" width="95" height="37" /></li>
+                <li class="d1"><img src="images/logo_13.jpg" width="95" height="37" /></li>
+                <li class="d1"><img src="images/logo_13.jpg" width="95" height="37" /></li>
+           </ul>
+          <!----------------------友情链接---------------------->
+          		<ul class="dbak">
+                	<li class="lianjie"><a href="#">汕头建设网</a></li>
+                    <li class="lianjie"><a href="#">汕头建设网</a></li>
+                    <li class="lianjie"><a href="#">汕头建设网</a></li>
+                    <li class="lianjie"><a href="#">汕头建设网</a></li>
+                    <li class="lianjie"><a href="#">汕头建设网</a></li>
+                    <li class="lianjie"><a href="#">汕头建设网</a></li>
+                    <li class="lianjie"><a href="#">汕头建设网</a></li>
+                    <li class="lianjie"><a href="#">汕头建设网</a></li>
+                    <li class="lianjie"><a href="#">汕头建设网</a></li>
+                </ul>
+    </div>
+     <!------------------------底部导航------------------------>
+     <div id="bom">
+                 <ul class="daohang">
+                     <li class="daowz"><a href="#">文件通知</a></li>
+                     <li class="daowz"><a href="#">职业注册</a></li>
+                     <li class="daowz"><a href="#">法律咨询</a></li>
+                     <li class="daowz"><a href="#">信息咨询</a></li>
+                     <li class="daowz"><a href="#">意见建议</a></li>
+                     <li class="daowz"><a href="#">网上回复</a></li>
+                 </ul>
+                 <div class="dbwenzi">Copyright@2005-2001 xxx.com 版权所有 未经许可 请勿转载</div> 
+                 <div class="dbwzamt">北京市公安局海淀分局备案编号：xxxxxxxx</div>
+     </div>
+</center>
+</body>
+</html>

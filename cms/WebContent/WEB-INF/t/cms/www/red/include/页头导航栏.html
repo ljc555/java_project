@@ -1,0 +1,13 @@
+     <div class="top">
+          <div class="topa"></div>
+               <div class="topb">
+                    <ul>
+                      [@cms_channel_list]
+                      <li class="lia"><a href="${base}/" target="_self">首页</a></li>
+                      [#list tag_list as c]
+                      <li class="lib"><a href="${c.url}" >${c.name}</a></li>
+                      [/#list]
+                      [/@cms_channel_list]
+                    </ul>
+               </div>
+     </div>
